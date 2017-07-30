@@ -535,14 +535,6 @@ static id orNull (id obj)
     [mediaControl getPositionWithSuccess:command.successWithDouble failure:command.failure];
 }
 
-- (void) mediaControl_getPlayState:(JSCommand*)command
-{
-    id<MediaControl> mediaControl = [self getMediaControl:command];
-    if (!mediaControl) return;
-    
-    [mediaControl getPlayStateWithSuccess:command.playStateSuccess failure:command.failure];
-}
-
 - (ServiceSubscription*) mediaControl_subscribePlayState:(JSCommand*)command
 {
     id<MediaControl> mediaControl = [self getMediaControl:command];

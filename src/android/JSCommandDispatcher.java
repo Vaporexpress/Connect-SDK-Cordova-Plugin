@@ -395,14 +395,6 @@ public class JSCommandDispatcher {
     }
 
     @CommandMethod
-    public void mediaControl_getPlayState(JSCommand command, JSONObject args) throws JSONException {
-        MediaControl mediaControl = getMediaControl(command, args);
-
-        mediaControl.getPlayState(command.getPlayStateListener());
-
-    }
-
-     @CommandMethod
     public void mediaControl_subscribePlayState(final JSCommand command, JSONObject args) throws JSONException {
         MediaControl mediaControl = getMediaControl(command, args);
 
